@@ -14,7 +14,7 @@ export const AISection = () => {
           <p className="text-lg text-white/90 mb-10 leading-relaxed max-w-xl">
             We help founders and project managers add AI features that improve the product, accelerate workflows, and create real user value. From early prototypes to full-scale implementations, we ensure smooth delivery, clear process, and measurable outcomes that move your roadmap forward.
           </p>
-          <a href="#" className="inline-flex items-center bg-white text-black px-6 py-3 rounded font-bold group transition-all hover:bg-neutral-100">
+          <a href="#" className="inline-flex items-center bg-white text-black px-6 py-3 font-bold group transition-all hover:bg-neutral-100">
             AI Integration
             <ArrowRight className="ml-3 size-6 text-primary transition-transform group-hover:translate-x-1" />
           </a>

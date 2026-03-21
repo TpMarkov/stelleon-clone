@@ -184,7 +184,7 @@ export const Header = () => {
                                 />
                                 <div className="absolute inset-0 bg-black/20" />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                  <div className="size-12 rounded-full bg-primary/90 flex items-center justify-center text-white backdrop-blur-sm transition-transform group-hover/featured:scale-110">
+                                  <div className="size-12 bg-primary/90 flex items-center justify-center text-white backdrop-blur-sm transition-transform group-hover/featured:scale-110">
                                     <div className="ml-1 border-y-[8px] border-y-transparent border-l-[12px] border-l-white" />
                                   </div>
                                 </div>
@@ -227,7 +227,7 @@ export const Header = () => {
                               </h3>
                               <Link 
                                 to="/blog"
-                                className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-8 py-3 text-[12px] font-extrabold uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-white transition-all"
+                                className="inline-flex items-center justify-center border-2 border-primary px-8 py-3 text-[12px] font-extrabold uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-white transition-all"
                               >
                                 All posts
                               </Link>
@@ -244,7 +244,7 @@ export const Header = () => {
                                 />
                               </div>
                               <div className="relative z-10 space-y-4">
-                                <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 backdrop-blur-sm">
+                                <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1 backdrop-blur-sm">
                                   <div className="ml-0.5 border-y-[4px] border-y-transparent border-l-[6px] border-l-white" />
                                   <span className="text-[9px] font-extrabold uppercase tracking-[0.2em] text-white">PLAY</span>
                                 </div>
@@ -291,7 +291,7 @@ export const Header = () => {
             <li>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-4.5 text-center text-[12px] font-extrabold uppercase tracking-[0.2em] text-white transition-all hover:bg-text-dark hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(255,109,42,0.4)] shadow-[0_10px_20px_-5px_rgba(255,109,42,0.3)]"
+                className="inline-flex items-center justify-center bg-primary px-10 py-4.5 text-center text-[12px] font-extrabold uppercase tracking-[0.2em] text-white transition-all hover:bg-text-dark hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(255,109,42,0.4)] shadow-[0_10px_20px_-5px_rgba(255,109,42,0.3)]"
               >
                 Estimate project
               </Link>
@@ -380,7 +380,7 @@ export const Header = () => {
                 >
                   <Link 
                     to="/contact" 
-                    className="block w-full rounded-full bg-primary py-6 text-center text-[13px] font-extrabold uppercase tracking-[0.2em] text-white shadow-[0_20px_40px_-12px_rgba(255,109,42,0.3)] transition-transform active:scale-95"
+                    className="block w-full bg-primary py-6 text-center text-[13px] font-extrabold uppercase tracking-[0.2em] text-white shadow-[0_20px_40px_-12px_rgba(255,109,42,0.3)] transition-transform active:scale-95"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Estimate project

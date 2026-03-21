@@ -19,7 +19,7 @@ export const TryDevelopers = () => {
                 Test our team
                 <ArrowRight className="ml-3 size-6 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="px-8 py-3 rounded border border-primary text-primary font-bold hover:bg-orange-50 transition-colors">
+              <button className="px-8 py-3 border border-primary text-primary font-bold hover:bg-orange-50 transition-colors">
                 Share this offer
               </button>
             </div>
