@@ -35,7 +35,7 @@ export const Hero = () => {
               Creating<br />
               <span className="text-primary">software</span> for
             </h1>
-            <div className="bg-neutral-100 px-6 py-4 lg:px-10 lg:py-6 mt-1 w-full inline-block">
+            <div className="bg-transparent px-6 py-4 lg:px-10 lg:py-6 mt-1 w-full inline-block">
               <h2 className="text-[11vw] md:text-[100px] xl:text-[130px] font-black text-text-dark leading-none tracking-[-0.04em] uppercase whitespace-nowrap">
                 complex systems
               </h2>

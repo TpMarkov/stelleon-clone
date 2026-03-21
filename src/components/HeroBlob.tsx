@@ -55,12 +55,12 @@ export const HeroBlob = () => {
 
       <defs>
         <linearGradient id="grad1" x1="420" y1="0" x2="420" y2="1150" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#CACAD0" stopOpacity="0.1" />
-          <stop offset="1" stopColor="#CACAD0" />
+          <stop stopColor="#e3e3e3" stopOpacity="0.1" />
+          <stop offset="1" stopColor="#e3e3e3" />
         </linearGradient>
         <linearGradient id="grad2" x1="1000" y1="350" x2="1000" y2="1550" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#CACAD0" />
-          <stop offset="1" stopColor="#CACAD0" stopOpacity="0.1" />
+          <stop stopColor="#e3e3e3" />
+          <stop offset="1" stopColor="#e3e3e3" stopOpacity="0.1" />
         </linearGradient>
       </defs>
     </svg>
