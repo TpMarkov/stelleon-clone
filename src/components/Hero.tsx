@@ -4,86 +4,73 @@ import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative h-[100dvh] min-h-[600px] flex flex-col justify-center overflow-hidden bg-white pt-16 lg:pt-20 pb-6">
-      <div className="container flex flex-col justify-center h-full" data-typewriter-words="scalable architectures,complex systems,high performance">
-        <div className="horizontal-content justify-left flex flex-col flex-wrap gap-x-12 gap-y-3 text-neutral-600 md:flex-row md:items-center leading-none [&_h1]:mb-[.15em] [&_h1]:w-full [&_h1]:text-[min(11vw,10vh,6.5rem)] [&_h1]:font-light [&_h1]:text-[#2F3033] xl:[&_h1]:leading-[0.85] xxl:[&_h1]:text-[min(13vw,150px)] [&_h1_i]:not-italic [&_h1_i]:text-brand-primary [&_h2]:mb-6 [&_h2]:text-2xl [&_h2]:font-semibold [&_h3]:mb-4 [&_h3]:text-xl [&_h3]:font-medium [&_p]:m-0 [&_p]:inline-block [&_p]:max-w-[28em] [&_p]:font-normal [&_p]:leading-[130%] [&_p]:tracking-[0.01em] [&_p]:text-neutral-600 lg:[&_p]:text-[min(2.2vh,17px)] [&_h1_b]:font-inherit [&_h1_b]:align-center [&_h1_b]:inline-block [&_h1_b]:whitespace-nowrap [&_h1_b]:bg-neutral-200 [&_h1_b]:pr-[.05em] [&_h1_b]:align-bottom [&_h1_b]:font-black [&_h1_b]:!text-black [&_h1_b]:text-inherit [&_h1_b]:shadow-[-.05em_.05em_0_.05em_#EAEAEB]">
-          <h1>
-            Creating<br />
-            <i>software</i> for<br />
-            <b>complex systems</b>
-          </h1>
-          <p>
-            From startups to global scaleups, we design, engineer, and scale reliable digital products built on clean architecture, robust infrastructure, and long-term maintainability.
-          </p>
-          <a
-            href="/portfolio/"
-            className="contact-button group/link inline-flex w-fit items-center gap-4 rounded bg-brand-primary-500 px-6 py-2.5 text-center text-base font-bold leading-relaxed text-white transition-colors duration-300 hover:bg-brand-primary-600 focus-visible:bg-brand-primary-600 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-brand-primary-600 disabled:opacity-30 xs:w-fit lg:px-8 lg:py-3 lg:text-md [&_svg]:inline-block [&_svg]:transition-all"
+    <section className="relative h-screen min-h-[600px] overflow-hidden bg-white p-5 pt-[100px] lg:pt-[116px] pb-12 flex flex-col justify-center">
+      {/* Abstract Background Blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[80%] bg-neutral-50 rounded-full blur-[120px] opacity-60" />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[70%] bg-neutral-50 rounded-full blur-[100px] opacity-40" />
+      </div>
+
+      <div className="container relative z-10 flex flex-col h-full justify-around">
+        <div className="max-w-6xl w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-1"
           >
-            See our work
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block">
-              <path d="M2 12H30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-              <path d="M25 7L30 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-              <path d="M25 17L30 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-            </svg>
-          </a>
+            <h1 className="text-[60px] lg:text-[100px] font-medium text-text-dark leading-[0.9] tracking-[-0.04em]">
+              Creating<br />
+              <span className="text-primary">software</span> for
+            </h1>
+            <div className="bg-neutral-100 px-6 py-4 lg:px-10 lg:py-6 mt-2 w-full">
+              <h2 className="text-[11vw] xl:text-[130px] font-black text-text-dark leading-none tracking-[-0.04em] uppercase whitespace-nowrap">
+                complex systems
+              </h2>
+            </div>
+          </motion.div>
+          
+          <div className="mt-8 flex flex-col lg:flex-row lg:items-end gap-8">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-xl text-[16px] lg:text-[18px] text-neutral-600 leading-relaxed font-medium"
+            >
+              From startups to global scaleups, we design, engineer, and scale reliable digital products built on clean architecture, robust infrastructure, and long-term maintainability.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <a 
+                href="/portfolio" 
+                className="inline-flex items-center gap-4 bg-primary px-8 py-4 text-[13px] font-extrabold uppercase tracking-[0.2em] text-white hover:bg-text-dark transition-all active:scale-95 shadow-lg shadow-primary/20"
+              >
+                See our work
+                <ArrowRight className="size-5" />
+              </a>
+            </motion.div>
+          </div>
         </div>
-        <div className="mt-4 flex flex-row flex-wrap items-center gap-4 sm:mt-8 lg:mt-6">
-          <span className="whitespace-nowrap text-center text-sm text-neutral-400 sm:mr-6 lg:text-left">Trusted by:</span>
-          <ul className="contents flex-wrap items-center justify-center gap-6 opacity-60 sm:flex lg:justify-start lg:gap-10">
-            <li className="flex items-center justify-center">
-              <img
-                src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F176x52%2Fc203eef352%2Falyne-dark.webp&w=88&h=26&dpl=69bd7828c00f6d00087cef7c"
-                alt="Brand logo"
-                style={{ aspectRatio: '88/26' }}
-                loading="eager"
-                decoding="async"
-                fetchPriority="auto"
-                width={88}
-                height={26}
-                className="max-h-12 w-auto object-contain grayscale filter"
-              />
-            </li>
-            <li className="flex items-center justify-center">
-              <img
-                src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F128x56%2F85633b799f%2Fhumly-dark.webp&w=64&h=28&dpl=69bd7828c00f6d00087cef7c"
-                alt="Brand logo"
-                style={{ aspectRatio: '64/28' }}
-                loading="eager"
-                decoding="async"
-                fetchPriority="auto"
-                width={64}
-                height={28}
-                className="max-h-12 w-auto object-contain grayscale filter"
-              />
-            </li>
-            <li className="flex items-center justify-center">
-              <img
-                src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F256x41%2F55090e2181%2Fdefined-learning-dark.webp&w=128&h=20&dpl=69bd7828c00f6d00087cef7c"
-                alt="Brand logo"
-                style={{ aspectRatio: '128/20' }}
-                loading="eager"
-                decoding="async"
-                fetchPriority="auto"
-                width={128}
-                height={20}
-                className="max-h-12 w-auto object-contain grayscale filter"
-              />
-            </li>
-            <li className="flex items-center justify-center">
-              <img
-                src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F176x38%2F623bf40901%2Fbrand-actif-dark.webp&w=88&h=19&dpl=69bd7828c00f6d00087cef7c"
-                alt="Brand logo"
-                style={{ aspectRatio: '88/19' }}
-                loading="eager"
-                decoding="async"
-                fetchPriority="auto"
-                width={88}
-                height={19}
-                className="max-h-12 w-auto object-contain grayscale filter"
-              />
-            </li>
-          </ul>
-        </div>
+
+        {/* Trusted By Section */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-12 pt-8 border-t border-neutral-100 flex flex-wrap items-center gap-x-12 gap-y-6"
+        >
+          <span className="text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400">Trusted by:</span>
+          <div className="flex flex-wrap items-center gap-x-10 gap-y-6 grayscale opacity-40 hover:opacity-100 transition-opacity">
+            <img src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F176x52%2Fc203eef352%2Falyne-dark.webp&w=88&h=26" alt="Alyne" className="h-5 lg:h-6" />
+            <img src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F128x56%2F85633b799f%2Fhumly-dark.webp&w=64&h=28" alt="Humly" className="h-5 lg:h-6" />
+            <img src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F256x41%2F6ee0fa3639%2Fdefined-learning-dark.png&w=128&h=20" alt="Defined Learning" className="h-5 lg:h-6" />
+            <img src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F176x38%2F623bf40901%2Fbrand-actif-dark.webp&w=88&h=19" alt="Brand Actif" className="h-5 lg:h-6" />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
