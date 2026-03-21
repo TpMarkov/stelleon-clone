@@ -6,39 +6,41 @@
   
   --color-primary: #FF6D2A;
   --color-accent: #FF6D2A;
-  --color-background: #FFFFFF;
-  --color-text-primary: #2F3033;
-  --color-link: #9CA3AF;
+  --color-background: #F4F5F5;
+  --color-text-primary: #FF6D2A;
+  --color-brand-orange: #FF6D2A;
+  --color-text-dark: #2F3033;
   
   --radius-custom: 4px;
   
   --breakpoint-xxl: 1440px;
+  --breakpoint-xxxl: 1920px;
 }
 
 @layer base {
   body {
-    @apply bg-white text-text-primary font-sans antialiased;
+    @apply bg-background text-text-primary font-sans antialiased;
   }
   
   h1 {
-    @apply text-[min(14vw,172px)] font-light leading-[0.9] tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-[72px] font-extrabold leading-tight tracking-tight;
   }
   
   h2 {
-    @apply text-2xl lg:text-[72px] xxl:text-[96px] font-light leading-none tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-[80px] font-extrabold leading-none tracking-tight;
   }
 }
 
 .container {
-  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-[1440px] px-6 lg:px-12;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-custom bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-custom bg-brand-orange px-8 py-3 text-base font-bold text-white transition-all hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-none bg-[#2F3033] px-6 py-3 text-base font-bold text-white transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-none bg-background px-8 py-3 text-base font-bold text-[#696B72] transition-all hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
 }
 
 /* Custom animations from HTML */
@@ -58,4 +60,14 @@
 
 .animate-bounce-right-arrow {
   animation: bounce-right-arrow 1s infinite;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
