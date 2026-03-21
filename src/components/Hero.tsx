@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[70%] bg-neutral-50 rounded-full blur-[100px] opacity-40" />
       </div>
 
-      <div className="container relative z-10 flex flex-col h-full justify-around">
+      <div className="container relative z-10 flex flex-col h-full justify-between">
         <div className="max-w-6xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

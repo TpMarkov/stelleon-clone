@@ -1,7 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  GraduationCap, 
+  BookOpen, 
+  Monitor, 
+  Library, 
+  Sparkles, 
+  Bell, 
+  UserCheck, 
+  Clock, 
+  Target, 
+  CreditCard, 
+  TrendingUp 
+} from 'lucide-react';
+
+const IconMap: { [key: string]: React.ElementType } = {
+  GraduationCap,
+  BookOpen,
+  Monitor,
+  Library,
+  Sparkles,
+  Bell,
+  UserCheck,
+  Clock,
+  Target,
+  CreditCard,
+  TrendingUp
+};
 
 const Logo = () => (
   <div className="flex items-center gap-1.5">
@@ -66,19 +95,44 @@ export const Header = () => {
     { 
       name: 'Industries', 
       href: '/industries',
+      isIndustries: true,
       dropdown: [
         {
-          title: 'Our Expertise',
+          title: 'EdTech Software Development',
           items: [
-            { name: 'EdTech', href: '/industries/edtech' },
-            { name: 'HRM & Recruitment', href: '/industries/hrm' },
-            { name: 'FinTech', href: '/industries/fintech' },
-            { name: 'Healthcare', href: '/industries/healthcare' },
-            { name: 'Real Estate', href: '/industries/real-estate' },
-            { name: 'E-commerce', href: '/industries/ecommerce' },
-            { name: 'Logistics', href: '/industries/logistics' },
-            { name: 'AdTech', href: '/industries/adtech' },
+            { name: 'LMS for enterprise', href: '/industries/edtech/lms-enterprise', icon: 'GraduationCap' },
+            { name: 'Education Software', href: '/industries/edtech/education', icon: 'Library' },
+            { name: 'Learning Management Software', href: '/industries/edtech/lms', icon: 'BookOpen' },
+            { name: 'Learning Experience Platform', href: '/industries/edtech/lxp', icon: 'Sparkles' },
+            { name: 'Business Training Software', href: '/industries/edtech/business-training', icon: 'Monitor' },
+            { name: 'Virtual Classroom Software', href: '/industries/edtech/virtual-classroom', icon: 'Bell' },
           ]
+        },
+        {
+          title: 'HRM Software Development',
+          items: [
+            { name: 'Talent Management Software', href: '/industries/hrm/talent', icon: 'UserCheck' },
+            { name: 'Payroll Software', href: '/industries/hrm/payroll', icon: 'CreditCard' },
+            { name: 'Time Attendance Software', href: '/industries/hrm/attendance', icon: 'Clock' },
+            { name: 'Performance Management Software', href: '/industries/hrm/performance', icon: 'TrendingUp' },
+            { name: 'Applicant Tracking System', href: '/industries/hrm/ats', icon: 'Target' },
+          ]
+        },
+        {
+          title: 'Fintech Software Development',
+          href: '/industries/fintech'
+        },
+        {
+          title: 'Real Estate Software Development',
+          href: '/industries/real-estate'
+        },
+        {
+          title: 'Healthcare Software Development',
+          href: '/industries/healthcare'
+        },
+        {
+          title: 'E-commerce Software Development',
+          href: '/industries/ecommerce'
         }
       ]
     },
@@ -168,8 +222,8 @@ export const Header = () => {
 
                 {/* Mega Menu */}
                 {link.dropdown && (
-                  <div className={`invisible absolute left-1/2 top-full w-screen ${link.isBlog ? 'max-w-[1200px]' : 'max-w-[1200px]'} -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2`}>
-                    <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : 'grid-cols-3'} gap-12 rounded-[2rem] bg-white p-12 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5`}>
+                  <div className={`invisible absolute left-1/2 top-full w-screen ${link.isBlog || link.isIndustries ? 'max-w-[1200px]' : 'max-w-[1200px]'} -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2`}>
+                    <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : link.isIndustries ? 'grid-cols-1' : 'grid-cols-3'} gap-12 rounded-[2rem] bg-white p-12 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5`}>
                       {link.isBlog ? (
                         <>
                           {/* Blog Left Side - Featured Post */}
@@ -255,6 +309,49 @@ export const Header = () => {
                             </div>
                           </div>
                         </>
+                      ) : link.isIndustries ? (
+                        <div className="grid grid-cols-2 gap-x-16 gap-y-12">
+                          {/* Top Row: EdTech and HRM */}
+                          {link.dropdown.slice(0, 2).map((section: any) => (
+                            <div key={section.title} className="space-y-6">
+                              <h4 className="text-[18px] font-bold text-text-dark">
+                                {section.title}
+                              </h4>
+                              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                                {section.items.map((item: any) => {
+                                  const Icon = IconMap[item.icon];
+                                  return (
+                                    <Link 
+                                      key={item.name}
+                                      to={item.href}
+                                      className="group/item flex items-center gap-3 py-1"
+                                    >
+                                      <div className="text-primary shrink-0">
+                                        {Icon && <Icon className="size-5" />}
+                                      </div>
+                                      <span className="text-[14px] font-bold text-text-dark group-hover:text-primary transition-colors leading-tight">
+                                        {item.name}
+                                      </span>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ))}
+                          {/* Bottom Rows: Fintech, Real Estate, Healthcare, E-commerce */}
+                          <div className="grid grid-cols-2 col-span-2 gap-x-16 gap-y-12">
+                            {link.dropdown.slice(2).map((section: any) => (
+                              <div key={section.title}>
+                                <Link 
+                                  to={section.href}
+                                  className="text-[18px] font-bold text-text-dark hover:text-primary transition-colors"
+                                >
+                                  {section.title}
+                                </Link>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       ) : (
                         link.dropdown.map((section) => (
                           <div key={section.title} className="space-y-8">
@@ -354,16 +451,29 @@ export const Header = () => {
                       </Link>
                       {link.dropdown && (
                         <div className="mt-6 grid grid-cols-1 gap-4 pl-2">
-                          {link.dropdown[0].items.slice(0, 3).map(item => (
-                            <Link 
-                              key={item.name}
-                              to={item.href}
-                              className="text-sm font-bold text-neutral-400 hover:text-primary transition-colors"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
+                          {link.isIndustries ? (
+                            link.dropdown.map((section: any) => (
+                              <Link 
+                                key={section.title}
+                                to={section.href || section.items?.[0]?.href}
+                                className="text-sm font-bold text-neutral-400 hover:text-primary transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {section.title}
+                              </Link>
+                            ))
+                          ) : (
+                            link.dropdown[0].items.slice(0, 3).map(item => (
+                              <Link 
+                                key={item.name}
+                                to={item.href}
+                                className="text-sm font-bold text-neutral-400 hover:text-primary transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {item.name}
+                              </Link>
+                            ))
+                          )}
                         </div>
                       )}
                     </motion.li>
