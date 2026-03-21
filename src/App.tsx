@@ -8,6 +8,7 @@ import WhoWeAre from './pages/WhoWeAre';
 import Blog from './pages/Blog';
 import LMSForEnterprise from './pages/LMSForEnterprise';
 import CustomLMSDevelopment from './pages/CustomLMSDevelopment';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
           <Route path="who-we-are" element={<WhoWeAre />} />
           <Route path="about" element={<div className="pt-32 container"><h1>About us</h1></div>} />
           <Route path="blog" element={<Blog />} />
-          <Route path="contact" element={<div className="pt-32 container"><h1>Contact</h1></div>} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
