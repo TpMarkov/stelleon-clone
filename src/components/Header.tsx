@@ -100,7 +100,39 @@ export const Header = () => {
         }
       ]
     },
-    { name: 'Blog', href: '/blog' },
+    { 
+      name: 'Blog', 
+      href: '/blog',
+      dropdown: [
+        {
+          title: 'Latest posts',
+          items: [
+            { 
+              name: 'LMS vs Manual Training Management in 2026: Compliance Tracking, TMS vs LMS, and Implementation Steps', 
+              href: '/blog/lms-vs-manual', 
+              image: 'https://picsum.photos/seed/lms/400/225',
+              isFeatured: true 
+            },
+            { 
+              name: 'In House Vs Outsourcing Software Development: How To Choose The Right Model For Your Business', 
+              href: '/blog/outsourcing',
+              image: 'https://picsum.photos/seed/outsourcing/120/80'
+            },
+            { 
+              name: 'Choosing Cloud for Your MVP Without Getting Trapped: Cost, Risk, and Vendor Lock-In', 
+              href: '/blog/cloud',
+              image: 'https://picsum.photos/seed/cloud/120/80'
+            },
+            { 
+              name: 'Spec-Driven Development: Workflow, Tools, Risks, and Best Use Cases', 
+              href: '/blog/spec-driven',
+              image: 'https://picsum.photos/seed/spec/120/80'
+            },
+          ]
+        }
+      ],
+      isBlog: true
+    },
   ];
 
   return (
@@ -121,7 +153,7 @@ export const Header = () => {
               <li key={link.name} className="group relative py-6">
                 <Link 
                   to={link.href}
-                  className={`flex items-center text-[13px] font-extrabold uppercase tracking-[0.15em] transition-colors ${
+                  className={`relative flex items-center text-[13px] font-extrabold uppercase tracking-[0.15em] transition-colors ${
                     isScrolled ? 'text-text-dark' : 'text-text-dark'
                   } group-hover:text-primary`}
                 >
@@ -129,38 +161,128 @@ export const Header = () => {
                   {link.dropdown && (
                     <ChevronDown className="ml-1.5 size-3.5 transition-transform duration-300 group-hover:rotate-180" />
                   )}
+                  {link.name === 'Blog' && (
+                    <span className="absolute -bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
+                  )}
                 </Link>
 
                 {/* Mega Menu */}
                 {link.dropdown && (
-                  <div className="invisible absolute left-1/2 top-full w-screen max-w-[1200px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
-                    <div className="grid grid-cols-3 gap-12 rounded-[2rem] bg-white p-12 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
-                      {link.dropdown.map((section) => (
-                        <div key={section.title} className="space-y-8">
-                          <h4 className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary/80 border-b border-neutral-100 pb-4">
-                            {section.title}
-                          </h4>
-                          <ul className="space-y-6">
-                            {section.items.map((item) => (
-                              <li key={item.name}>
-                                <Link 
-                                  to={item.href}
-                                  className="group/item block"
-                                >
-                                  <span className="block text-[15px] font-extrabold text-text-dark group-hover/item:text-primary transition-colors">
-                                    {item.name}
-                                  </span>
-                                  {item.desc && (
-                                    <span className="block text-[12px] font-medium text-neutral-400 mt-1 leading-relaxed">
-                                      {item.desc}
+                  <div className={`invisible absolute left-1/2 top-full w-screen ${link.isBlog ? 'max-w-[1200px]' : 'max-w-[1200px]'} -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2`}>
+                    <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : 'grid-cols-3'} gap-12 rounded-[2rem] bg-white p-12 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5`}>
+                      {link.isBlog ? (
+                        <>
+                          {/* Blog Left Side - Featured Post */}
+                          <div className="space-y-6">
+                            <Link to={(link.dropdown[0].items[0] as any).href} className="group/featured block space-y-4">
+                              <div className="relative aspect-video overflow-hidden bg-neutral-100">
+                                <img 
+                                  src={(link.dropdown[0].items[0] as any).image} 
+                                  alt={(link.dropdown[0].items[0] as any).name}
+                                  className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover/featured:scale-105"
+                                  referrerPolicy="no-referrer"
+                                />
+                                <div className="absolute inset-0 bg-black/20" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <div className="size-12 rounded-full bg-primary/90 flex items-center justify-center text-white backdrop-blur-sm transition-transform group-hover/featured:scale-110">
+                                    <div className="ml-1 border-y-[8px] border-y-transparent border-l-[12px] border-l-white" />
+                                  </div>
+                                </div>
+                              </div>
+                              <h3 className="text-[15px] font-extrabold text-text-dark leading-tight group-hover/featured:text-primary transition-colors">
+                                {(link.dropdown[0].items[0] as any).name}
+                              </h3>
+                            </Link>
+                          </div>
+
+                          {/* Blog Middle Side - Smaller Posts */}
+                          <div className="space-y-8">
+                            <ul className="space-y-8">
+                              {link.dropdown[0].items.slice(1).map((item: any) => (
+                                <li key={item.name}>
+                                  <Link to={item.href} className="group/item flex gap-4">
+                                    <div className="size-20 shrink-0 overflow-hidden bg-neutral-100">
+                                      <img 
+                                        src={item.image} 
+                                        alt={item.name}
+                                        className="size-full object-cover transition-transform duration-500 group-hover/item:scale-110"
+                                        referrerPolicy="no-referrer"
+                                      />
+                                    </div>
+                                    <span className="text-[13px] font-extrabold text-text-dark group-hover/item:text-primary transition-colors leading-tight">
+                                      {item.name}
                                     </span>
-                                  )}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Blog Right Side */}
+                          <div className="flex flex-col justify-between">
+                            <div className="space-y-6">
+                              <h3 className="text-2xl font-extrabold text-text-dark leading-tight">
+                                Read Our <span className="text-primary">Blog</span>.<br />
+                                Make better products with us.
+                              </h3>
+                              <Link 
+                                to="/blog"
+                                className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-8 py-3 text-[12px] font-extrabold uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-white transition-all"
+                              >
+                                All posts
+                              </Link>
+                            </div>
+                            
+                            {/* Play Banner */}
+                            <div className="mt-8 group/banner relative overflow-hidden bg-primary p-6 aspect-[16/9] flex flex-col justify-end">
+                              <div className="absolute right-0 top-0 size-full opacity-20">
+                                <img 
+                                  src="https://picsum.photos/seed/edtech/400/225" 
+                                  alt="Selleo YouTube"
+                                  className="size-full object-cover transition-transform duration-500 group-hover/banner:scale-110"
+                                  referrerPolicy="no-referrer"
+                                />
+                              </div>
+                              <div className="relative z-10 space-y-4">
+                                <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 backdrop-blur-sm">
+                                  <div className="ml-0.5 border-y-[4px] border-y-transparent border-l-[6px] border-l-white" />
+                                  <span className="text-[9px] font-extrabold uppercase tracking-[0.2em] text-white">PLAY</span>
+                                </div>
+                                <h4 className="text-[15px] font-extrabold text-white leading-tight">
+                                  Explore cutting-edge EdTech insights on DTA YouTube channel!
+                                </h4>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        link.dropdown.map((section) => (
+                          <div key={section.title} className="space-y-8">
+                            <h4 className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary/80 border-b border-neutral-100 pb-4">
+                              {section.title}
+                            </h4>
+                            <ul className="space-y-6">
+                              {section.items.map((item) => (
+                                <li key={item.name}>
+                                  <Link 
+                                    to={item.href}
+                                    className="group/item block"
+                                  >
+                                    <span className="block text-[15px] font-extrabold text-text-dark group-hover/item:text-primary transition-colors">
+                                      {item.name}
+                                    </span>
+                                    {item.desc && (
+                                      <span className="block text-[12px] font-medium text-neutral-400 mt-1 leading-relaxed">
+                                        {item.desc}
+                                      </span>
+                                    )}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      )}
                     </div>
                   </div>
                 )}
