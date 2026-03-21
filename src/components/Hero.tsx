@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden bg-white pt-20 lg:pt-24 pb-12 flex flex-col justify-center">
+    <section className="relative h-screen min-h-[600px] overflow-hidden bg-white p-5 pt-[100px] lg:pt-[116px] pb-12 flex flex-col justify-center">
       {/* Abstract Background Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[80%] bg-neutral-50 rounded-full blur-[120px] opacity-60" />
