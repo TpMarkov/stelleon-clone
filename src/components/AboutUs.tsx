@@ -11,13 +11,13 @@ export const AboutUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-sm font-black uppercase tracking-widest text-primary mb-6 block">Why Selleo</span>
+          <span className="text-sm font-black uppercase tracking-widest text-primary mb-6 block">Why webDevBg</span>
           <h2 className="mb-8">
             Do you need a partner <strong>to ship a project fast on a tight budget?</strong>
           </h2>
           <div className="space-y-6 text-lg text-neutral-500 leading-relaxed">
             <p className="font-bold text-neutral-600">
-              Selleo is built for founders and project managers who can’t afford delays or costly rewrites.
+              webDevBg is built for founders and project managers who can’t afford delays or costly rewrites.
             </p>
             <p>
               We start with product discovery to validate your idea, cut the MVP to the essentials, and deliver with senior engineers who own the outcome.
@@ -38,7 +38,7 @@ export const AboutUs = () => {
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://a.storyblok.com/f/86602/1200x630/d3297abb4f/website-thumbnail_founder-pm.png" 
-              alt="Selleo Team" 
+              alt="webDevBg Team" 
               className="w-full h-auto"
             />
           </div>

@@ -72,7 +72,7 @@ const DNASection = () => (
             </h2>
           </div>
           <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-            Selleo mindset focuses on a self-driven growth towards ingenious mastery and knowledge-sharing culture combined with a participative approach to decision making and empowerment based on <span className="text-text-dark font-black">Management 3.0.</span>
+            webDevBg mindset focuses on a self-driven growth towards ingenious mastery and knowledge-sharing culture combined with a participative approach to decision making and empowerment based on <span className="text-text-dark font-black">Management 3.0.</span>
           </p>
           
           <div className="relative pt-12 border-t border-neutral-100">
@@ -203,7 +203,7 @@ const Timeline = () => {
     <section className="py-24 lg:py-48 bg-[#2F3033] text-white overflow-hidden">
       <div className="container">
         <h2 className="text-4xl lg:text-5xl font-black mb-24">
-          Selleo <span className="text-primary">timeline</span>
+          webDevBg <span className="text-primary">timeline</span>
         </h2>
         
         <div className="relative">

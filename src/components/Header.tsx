@@ -34,7 +34,7 @@ const IconMap: { [key: string]: React.ElementType } = {
 
 const Logo = () => (
   <div className="flex items-center gap-1.5">
-    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">Selleo</span>
+    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">webDevBg</span>
     <div className="size-2 lg:size-2.5 rounded-full bg-primary mt-1.5 lg:mt-2" />
   </div>
 );
@@ -292,7 +292,7 @@ export const Header = () => {
                               <div className="absolute right-0 top-0 size-full opacity-20">
                                 <img 
                                   src="https://picsum.photos/seed/edtech/400/225" 
-                                  alt="Selleo YouTube"
+                                  alt="webDevBg YouTube"
                                   className="size-full object-cover transition-transform duration-500 group-hover/banner:scale-110"
                                   referrerPolicy="no-referrer"
                                 />
@@ -499,8 +499,8 @@ export const Header = () => {
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8">
                     <div className="space-y-2">
                       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-neutral-400">Email us</p>
-                      <a href="mailto:hello@selleo.com" className="text-lg font-extrabold text-text-dark hover:text-primary transition-colors">
-                        hello@selleo.com
+                      <a href="mailto:webdevstudiohq@gmail.com" className="text-lg font-extrabold text-text-dark hover:text-primary transition-colors">
+                        webdevstudiohq@gmail.com
                       </a>
                     </div>
                     <div className="space-y-2">

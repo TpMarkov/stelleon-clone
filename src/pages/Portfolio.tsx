@@ -25,17 +25,17 @@ const VideoHero = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videos = [
     {
-      url: "https://cdn.selleo.com/Kristoffer_Persson_testimonial_interview_preview.mp4",
+      url: "https://cdn.WebDevBG.com/Kristoffer_Persson_testimonial_interview_preview.mp4",
       title: "Kristoffer Persson",
       role: "CTO at Exegov"
     },
     {
-      url: "https://cdn.selleo.com/Manuel_Reil_testimonial_interview_preview.mp4",
+      url: "https://cdn.WebDevBG.com/Manuel_Reil_testimonial_interview_preview.mp4",
       title: "Manuel Reil",
       role: "Founder at Datagame"
     },
     {
-      url: "https://cdn.selleo.com/Jan_Fredrik_Korsmo_testimonial_interview_preview.mp4",
+      url: "https://cdn.WebDevBG.com/Jan_Fredrik_Korsmo_testimonial_interview_preview.mp4",
       title: "Jan Fredrik Korsmo",
       role: "CEO at Humly"
     }
@@ -66,7 +66,7 @@ const VideoHero = () => {
               className="space-y-8"
             >
               <div className="flex items-center gap-4">
-                <img src="https://selleo.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F32x32%2F720640503f%2Fsmiley-face-message.png&w=32&h=32" alt="smiley" className="size-8" />
+                <img src="https://WebDevBG.com/.netlify/images?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F86602%2F32x32%2F720640503f%2Fsmiley-face-message.png&w=32&h=32" alt="smiley" className="size-8" />
                 <div className="h-px flex-1 bg-neutral-200" />
               </div>
               <p className="text-xl text-neutral-500 leading-relaxed max-w-xl font-medium">
@@ -413,7 +413,7 @@ const Portfolio = () => {
           >
             <div className="space-y-4">
               <h3 className="text-4xl font-black text-text-dark">
-                All projects by <span className="text-primary">Selleo</span>
+                All projects by <span className="text-primary">WebDevBG</span>
               </h3>
               <p className="text-neutral-500 font-medium">Explore our full range of digital solutions across industries.</p>
             </div>
@@ -552,7 +552,7 @@ const Portfolio = () => {
                   Ready to <span className="text-primary">elevate</span> your digital presence?
                 </h2>
                 <p className="text-neutral-500 text-lg font-medium leading-relaxed">
-                  Join 150+ companies that trusted Selleo with their software development. 
+                  Join 150+ companies that trusted WebDevBG with their software development. 
                   Fill out the form and we'll get back to you within 24 hours.
                 </p>
               </div>
@@ -560,11 +560,11 @@ const Portfolio = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-primary">Email us</h4>
-                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">hello@selleo.com</p>
+                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">webddevstudiohq@gmail.com</p>
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-primary">Call us</h4>
-                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">+48 33 486 90 00</p>
+                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">0899820540</p>
                 </div>
               </div>
 

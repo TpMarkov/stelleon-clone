@@ -421,7 +421,7 @@ Scalability and performance need: If you anticipate a large user base or expect 
                   Free for 2 weeks.
                 </h2>
                 <p className="text-xl text-neutral-600 mb-12 max-w-xl">
-                  <span className="font-bold">No risk. Just results.</span> Get a feel for our process, speed, and quality — work with our developers for a trial sprint and see why global companies choose Selleo.
+                  <span className="font-bold">No risk. Just results.</span> Get a feel for our process, speed, and quality — work with our developers for a trial sprint and see why global companies choose webDevBg.
                 </p>
                 <div className="flex flex-wrap gap-6">
                   <button className="bg-primary text-white px-10 py-5 rounded font-extrabold uppercase tracking-widest text-sm hover:bg-primary/90 transition-all flex items-center gap-4 group">
@@ -511,7 +511,7 @@ Scalability and performance need: If you anticipate a large user base or expect 
                   <span className="text-lg font-medium">- your choice</span>
                 </div>
                 <p className="text-xl text-white/90 leading-relaxed mb-12 max-w-2xl">
-                  Mentingo is an AI-first LMS that personalizes learning paths, automates content generation, and engages learners through intelligent assistants – all built by Selleo’s EdTech team.
+                  Mentingo is an AI-first LMS that personalizes learning paths, automates content generation, and engages learners through intelligent assistants – all built by webDevBg's EdTech team.
                 </p>
                 <button className="bg-text-dark text-white px-10 py-5 rounded font-extrabold uppercase tracking-widest text-sm hover:bg-white hover:text-text-dark transition-all shadow-xl">
                   See Mentingo in Action
@@ -884,7 +884,7 @@ Scalability and performance need: If you anticipate a large user base or expect 
               <div className="md:w-2/3 relative">
                 <MessageSquare className="absolute -top-8 -left-8 size-16 text-primary/10" />
                 <p className="text-2xl font-medium text-neutral-600 leading-relaxed italic relative z-10">
-                  "Selleo has proved to be a professional and competent web and mobile software development team, they were apt at understanding our wishes and extremely service minded. I highly endorse whole Selleo team."
+                  "webDevBg has proved to be a professional and competent web and mobile software development team, they were apt at understanding our wishes and extremely service minded. I highly endorse whole webDevBg team."
                 </p>
               </div>
             </div>
@@ -999,15 +999,15 @@ Scalability and performance need: If you anticipate a large user base or expect 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="space-y-8">
               <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-black tracking-tighter text-text-dark">Selleo</span>
+                <span className="text-2xl font-black tracking-tighter text-text-dark">webDevBg</span>
                 <div className="size-2 rounded-full bg-primary mt-1.5" />
               </div>
               <address className="text-neutral-500 not-italic leading-relaxed">
-                Selleo Labs spółka z o.o.<br />
+                webDevBg Labs spółka z o.o.<br />
                 ul. Powstańców Śląskich 3/1<br />
                 43-300 Bielsko-Biała
               </address>
-              <a href="mailto:hello@selleo.com" className="text-primary font-bold hover:underline">hello@selleo.com</a>
+              <a href="mailto:webdevstudiohq@gmail.com" className="text-primary font-bold hover:underline">webdevstudiohq@gmail.com</a>
             </div>
             <div>
               <h4 className="text-sm font-black uppercase tracking-widest text-neutral-400 mb-8">Follow us</h4>
@@ -1037,7 +1037,7 @@ Scalability and performance need: If you anticipate a large user base or expect 
             </div>
           </div>
           <div className="mt-20 pt-8 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-400 font-medium">
-            <div>© 2026 Selleo. All rights reserved.</div>
+            <div>© 2026 webDevBg. All rights reserved.</div>
             <div className="flex gap-8">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">GDPR</a>

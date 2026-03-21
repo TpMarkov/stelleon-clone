@@ -19,7 +19,7 @@ export const Ratings = () => {
     {
       name: 'Nathaniel Oaks',
       role: 'CTO & Co-Founder, Breezeway',
-      content: 'We appreciate how invested Selleo is in our product.',
+      content: 'We appreciate how invested webDevBg is in our product.',
       rating: 5.0
     }
   ];

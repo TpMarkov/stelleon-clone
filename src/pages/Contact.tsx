@@ -198,7 +198,7 @@ const LocationSection = () => (
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-4">
-                  <h4 className="text-xl font-bold text-text-dark group-hover:text-primary transition-colors">SELLEO Bulgaria</h4>
+                  <h4 className="text-xl font-bold text-text-dark group-hover:text-primary transition-colors">webDevBg Bulgaria</h4>
                   <a 
                     href="https://maps.google.com" 
                     target="_blank" 
@@ -221,9 +221,8 @@ const LocationSection = () => (
               </div>
               <div className="space-y-2">
                 <h4 className="text-xl font-bold text-text-dark group-hover:text-primary transition-colors">Email us</h4>
-                <a href="mailto:hello@selleo.com" className="text-lg font-medium text-neutral-500 hover:text-primary transition-colors">
-                  hello@selleo.com
-                </a>
+                <a href="mailto:webdevstudiohq@gmail.com" className="text-lg font-medium text-neutral-500 hover:text-primary transition-colors">
+webdevstudiohq@gmail.com                </a>
               </div>
             </div>
           </div>
@@ -296,7 +295,7 @@ const SocialCollage = () => (
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-            <h4 className="text-2xl font-bold text-white mb-2">Social media @Selleo</h4>
+            <h4 className="text-2xl font-bold text-white mb-2">Social media @webDevBg</h4>
             <p className="text-neutral-300">Join our community and stay updated with the latest tech trends.</p>
           </div>
         </div>
