@@ -102,7 +102,7 @@ export const Header = () => {
           items: [
             { name: 'LMS for enterprise', href: '/industries/edtech/lms-enterprise', icon: 'GraduationCap' },
             { name: 'Education Software', href: '/industries/edtech/education', icon: 'Library' },
-            { name: 'Learning Management Software', href: '/industries/edtech/lms', icon: 'BookOpen' },
+            { name: 'Learning Management Software', href: '/industries/edtech/custom-lms-development', icon: 'BookOpen' },
             { name: 'Learning Experience Platform', href: '/industries/edtech/lxp', icon: 'Sparkles' },
             { name: 'Business Training Software', href: '/industries/edtech/business-training', icon: 'Monitor' },
             { name: 'Virtual Classroom Software', href: '/industries/edtech/virtual-classroom', icon: 'Bell' },
