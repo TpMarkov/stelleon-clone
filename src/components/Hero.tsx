@@ -11,6 +11,9 @@ export const Hero = () => {
       <div className="absolute inset-y-0 right-0 top-0 bottom-0 h-full w-[70%] lg:w-1/2 pointer-events-none">
         <HeroBlob />
       </div>
+<div className="absolute inset-y-0 right-[-3%] top-[6%] h-[70%] rotate-160 w-[40%] pointer-events-none">
+  <HeroBlob size="small" />
+</div>
 
       {/* Optional soft background blobs (like Selleo’s subtle noise/tone) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
