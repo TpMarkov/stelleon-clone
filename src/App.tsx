@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import WhoWeAre from './pages/WhoWeAre';
 import Blog from './pages/Blog';
+import LMSForEnterprise from './pages/LMSForEnterprise';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />
+          <Route path="industries/edtech/lms-enterprise" element={<LMSForEnterprise />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="who-we-are" element={<WhoWeAre />} />
           <Route path="about" element={<div className="pt-32 container"><h1>About us</h1></div>} />
