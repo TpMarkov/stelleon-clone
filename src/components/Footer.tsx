@@ -177,7 +177,7 @@ export const Footer = () => {
               transition={{ duration: 2, repeat: Infinity }}
               className="text-primary"
             >
-              ❤️
+               🧡
             </motion.div>
             <span>by webDevBg Team</span>
           </div>
