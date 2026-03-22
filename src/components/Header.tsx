@@ -223,9 +223,11 @@ export const Header = () => {
 
                 {/* Mega Menu */}
                 {link.dropdown && (
-                  <div className={`invisible absolute left-1/2 top-full w-screen ${link.isBlog || link.isIndustries ? 'max-w-[1200px]' : 'max-w-[1200px]'} -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2`}>
-                    <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : link.isIndustries ? 'grid-cols-1' : 'grid-cols-3'} gap-12 rounded-[2rem] bg-white p-12 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5`}>
-                      {link.isBlog ? (
+                  <div className="invisible absolute left-1/2 top-full w-screen -translate-x-1/2 pt-0 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
+                    <div className="bg-white shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
+                      <div className="container py-12">
+                        <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : link.isIndustries ? 'grid-cols-1' : 'grid-cols-3'} gap-12`}>
+                          {link.isBlog ? (
                         <>
                           {/* Blog Left Side - Featured Post */}
                           <div className="space-y-6">
@@ -381,6 +383,8 @@ export const Header = () => {
                           </div>
                         ))
                       )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
