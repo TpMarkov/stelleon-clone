@@ -205,7 +205,7 @@ export const Header = () => {
         <nav className="hidden lg:block">
           <ul className="flex items-center space-x-10">
             {navLinks.map((link) => (
-              <li key={link.name} className="group relative py-6">
+              <li key={link.name} className="group py-6">
                 <Link 
                   to={link.href}
                   className={`relative flex items-center text-[13px] font-extrabold uppercase tracking-[0.15em] transition-colors ${
@@ -223,7 +223,7 @@ export const Header = () => {
 
                 {/* Mega Menu */}
                 {link.dropdown && (
-                  <div className="invisible absolute left-1/2 top-full w-screen -translate-x-1/2 pt-0 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
+                  <div className="invisible absolute left-0 right-0 top-full pt-0 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
                     <div className="bg-white shadow-[0_40px_80px_-16px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
                       <div className="container py-12">
                         <div className={`grid ${link.isBlog ? 'grid-cols-[1.2fr_1.2fr_1fr]' : link.isIndustries ? 'grid-cols-1' : 'grid-cols-3'} gap-12`}>
