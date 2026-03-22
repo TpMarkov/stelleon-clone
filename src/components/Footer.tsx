@@ -23,8 +23,8 @@ const SocialLink = ({ href, icon: Icon, label }: { href: string; icon: any; labe
 );
 
 const FooterLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
-  <Link 
-    to={to} 
+  <Link
+    to={to}
     className="group flex items-center gap-1 text-[15px] font-bold text-text-dark hover:text-primary transition-all duration-300 w-fit"
   >
     <span className="relative">
@@ -64,21 +64,21 @@ export const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none overflow-hidden opacity-[0.04]">
         <motion.div style={{ x }} className="flex whitespace-nowrap">
           <h2 className="text-[30vw] font-black leading-none tracking-tighter pr-20">
-            SELLEO SELLEO SELLEO SELLEO
+            WEBDEVBG WEBDEVBG WEBDEVBG
           </h2>
         </motion.div>
       </div>
 
       {/* Floating Brand Icon - Subtle float animation */}
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -15, 0],
           rotate: [0, 5, 0]
         }}
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
         }}
         className="absolute top-20 right-[10%] pointer-events-none hidden lg:block"
       >
@@ -115,7 +115,7 @@ export const Footer = () => {
                 <li><FooterLink to="/who-we-are">Who We Are</FooterLink></li>
               </ul>
             </div>
-            
+
             <div className="space-y-8">
               <h4 className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-neutral-400 border-b border-neutral-100 pb-4 w-fit">Services</h4>
               <ul className="space-y-5">
@@ -138,8 +138,8 @@ export const Footer = () => {
                     </motion.span>
                   </a>
                 </div>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="group relative inline-flex items-center gap-3 px-8 py-4 bg-text-dark text-white text-[15px] font-bold overflow-hidden transition-all duration-300"
                 >
                   <span className="relative z-10">Get in Touch</span>
@@ -166,11 +166,11 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 text-[12px] font-bold text-neutral-400 uppercase tracking-widest">
             <span>Made with</span>
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.3, 1],
                 rotate: [0, 10, -10, 0]
               }}
