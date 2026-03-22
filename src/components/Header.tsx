@@ -15,7 +15,8 @@ import {
   Clock, 
   Target, 
   CreditCard, 
-  TrendingUp 
+  TrendingUp, 
+  ArrowUpRight
 } from 'lucide-react';
 
 const IconMap: { [key: string]: React.ElementType } = {
@@ -34,7 +35,7 @@ const IconMap: { [key: string]: React.ElementType } = {
 
 const Logo = () => (
   <div className="flex items-center gap-1.5">
-    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">Selleo</span>
+    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">webDevBg</span>
     <div className="size-2 lg:size-2.5 rounded-full bg-primary mt-1.5 lg:mt-2" />
   </div>
 );
@@ -292,7 +293,7 @@ export const Header = () => {
                               <div className="absolute right-0 top-0 size-full opacity-20">
                                 <img 
                                   src="https://picsum.photos/seed/edtech/400/225" 
-                                  alt="Selleo YouTube"
+                                  alt="webDevBg YouTube"
                                   className="size-full object-cover transition-transform duration-500 group-hover/banner:scale-110"
                                   referrerPolicy="no-referrer"
                                 />
@@ -387,11 +388,13 @@ export const Header = () => {
             ))}
             <li>
               <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center bg-primary px-10 py-4.5 text-center text-[12px] font-extrabold uppercase tracking-[0.2em] text-white transition-all hover:bg-text-dark hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(255,109,42,0.4)] shadow-[0_10px_20px_-5px_rgba(255,109,42,0.3)]"
-              >
-                Estimate project
-              </Link>
+                  to="/contact" 
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-text-dark text-white text-[15px] font-bold overflow-hidden transition-all duration-300"
+                >
+                  <span className="relative z-10">Contact</span>
+                  <ArrowUpRight className="relative z-10 size-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+                </Link>
             </li>
           </ul>
         </nav>
@@ -493,14 +496,14 @@ export const Header = () => {
                     className="block w-full bg-primary py-6 text-center text-[13px] font-extrabold uppercase tracking-[0.2em] text-white shadow-[0_20px_40px_-12px_rgba(255,109,42,0.3)] transition-transform active:scale-95"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Estimate project
+                    Contact
                   </Link>
                   
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8">
                     <div className="space-y-2">
                       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-neutral-400">Email us</p>
-                      <a href="mailto:hello@selleo.com" className="text-lg font-extrabold text-text-dark hover:text-primary transition-colors">
-                        hello@selleo.com
+                      <a href="mailto:webdevstudiohq@gmail.com" className="text-lg font-extrabold text-text-dark hover:text-primary transition-colors">
+                        webdevstudiohq@gmail.com
                       </a>
                     </div>
                     <div className="space-y-2">
