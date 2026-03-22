@@ -59,7 +59,7 @@ const ServiceCard = ({ icon: Icon, title, description, href }: any) => (
 const ServicesGrid = () => {
   const services = [
     { icon: Smartphone, title: 'Mobile', description: 'We create custom, secure, and scalable apps tailored to your business needs, growing with you.', href: '/services' },
-    { icon: Cpu, title: 'AI', description: 'Automate processes and enhance customer experience, giving your SaaS a competitive edge.', href: '/services' },
+    { icon: Cpu, title: 'AI', description: 'Automate processes and enhance customer experience, giving your SaaS a competitive edge.', href: '/services/artificial-intelligence' },
     { icon: Code, title: 'Custom Software', description: 'We help SMEs build custom software to gain a competitive edge and deliver unique solutions.', href: '/services/custom-software' },
     { icon: Globe, title: 'SaaS', description: 'We handle all SaaS development, delivering reliable solutions for business growth and innovation.', href: '/services/saas' },
     { icon: Search, title: 'Product', description: 'Turn your idea into reality with our expert team, guiding you through research and development.', href: '/services' },

@@ -5,7 +5,7 @@ import { Linkedin, Youtube, Twitter, Instagram, Facebook, ArrowUpRight, ChevronU
 
 const Logo = () => (
   <div className="flex items-center gap-1.5">
-    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">Selleo</span>
+    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">webDevBg</span>
     <div className="size-2 lg:size-2.5 rounded-full bg-primary mt-1.5 lg:mt-2" />
   </div>
 );
@@ -131,8 +131,8 @@ export const Footer = () => {
               <div className="space-y-8">
                 <div className="space-y-3">
                   <p className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest">Email us</p>
-                  <a href="mailto:hello@selleo.com" className="group flex items-center gap-2 text-[20px] font-bold text-text-dark hover:text-primary transition-colors">
-                    hello@selleo.com
+                  <a href="mailto:webdevstudiohq@gmail.com" className="group flex items-center gap-2 text-[20px] font-bold text-text-dark hover:text-primary transition-colors">
+                    webdevstudiohq@gmail.com
                     <motion.span whileHover={{ x: 5 }} className="text-primary">
                       <ArrowUpRight className="size-5" />
                     </motion.span>
@@ -154,7 +154,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-32 pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-[12px] font-bold text-neutral-400 uppercase tracking-widest">
-            <p>© 2026 Selleo. All rights reserved.</p>
+            <p>© 2026 WEBDEVBG. All rights reserved.</p>
             <div className="flex gap-10">
               <a href="#" className="hover:text-primary transition-all duration-300 relative group">
                 Privacy Policy
@@ -179,7 +179,7 @@ export const Footer = () => {
             >
               ❤️
             </motion.div>
-            <span>by Selleo Team</span>
+            <span>by webDevBg Team</span>
           </div>
         </div>
       </div>

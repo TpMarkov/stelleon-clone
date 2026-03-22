@@ -11,6 +11,7 @@ import CustomLMSDevelopment from './pages/CustomLMSDevelopment';
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment';
 import SaaSDevelopment from './pages/SaaSDevelopment';
 import UXDesign from './pages/UXDesign';
+import AIDevelopment from './pages/AIDevelopment';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="services/custom-software" element={<CustomSoftwareDevelopment />} />
           <Route path="services/saas" element={<SaaSDevelopment />} />
           <Route path="services/ux-design" element={<UXDesign />} />
+          <Route path="services/artificial-intelligence" element={<AIDevelopment />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />
           <Route path="industries/edtech/lms-enterprise" element={<LMSForEnterprise />} />
           <Route path="industries/edtech/custom-lms-development" element={<CustomLMSDevelopment />} />
