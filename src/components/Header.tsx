@@ -65,7 +65,7 @@ export const Header = () => {
             { name: 'SaaS Development', href: '/services/saas', desc: 'Scalable cloud-based applications' },
             { name: 'Mobile App Development', href: '/services/mobile', desc: 'iOS and Android native & cross-platform' },
             { name: 'AI & Machine Learning', href: '/services/ai', desc: 'Smart solutions for complex problems' },
-            { name: 'UX/UI Design', href: '/services/design', desc: 'User-centric digital experiences' },
+            { name: 'UX/UI Design', href: '/services/ux-design', desc: 'User-centric digital experiences' },
             { name: 'Product Discovery', href: '/services/discovery', desc: 'Validate your ideas before building' },
           ]
         },

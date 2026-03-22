@@ -63,7 +63,7 @@ const ServicesGrid = () => {
     { icon: Code, title: 'Custom Software', description: 'We help SMEs build custom software to gain a competitive edge and deliver unique solutions.', href: '/services/custom-software' },
     { icon: Globe, title: 'SaaS', description: 'We handle all SaaS development, delivering reliable solutions for business growth and innovation.', href: '/services/saas' },
     { icon: Search, title: 'Product', description: 'Turn your idea into reality with our expert team, guiding you through research and development.', href: '/services' },
-    { icon: Palette, title: 'UX/UI', description: 'Create engaging UX/UI that captivates users and drives business success from start to finish.', href: '/services' },
+    { icon: Palette, title: 'UX/UI', description: 'Create engaging UX/UI that captivates users and drives business success from start to finish.', href: '/services/ux-design' },
     { icon: CheckCircle, title: 'QA', description: 'Detect and fix issues early with our flexible QA services, tailored to complex projects.', href: '/services' },
     { icon: Settings, title: 'DevOps', description: 'We set up DevOps environments for optimal performance, using cloud or on-prem infrastructure.', href: '/services' },
   ];
