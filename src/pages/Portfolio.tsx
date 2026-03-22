@@ -413,7 +413,7 @@ const Portfolio = () => {
           >
             <div className="space-y-4">
               <h3 className="text-4xl font-black text-text-dark">
-                All projects by <span className="text-primary">WebDevBG</span>
+                All projects by <span className="text-primary">Selleo</span>
               </h3>
               <p className="text-neutral-500 font-medium">Explore our full range of digital solutions across industries.</p>
             </div>
@@ -552,7 +552,7 @@ const Portfolio = () => {
                   Ready to <span className="text-primary">elevate</span> your digital presence?
                 </h2>
                 <p className="text-neutral-500 text-lg font-medium leading-relaxed">
-                  Join 150+ companies that trusted WebDevBG with their software development. 
+                  Join 150+ companies that trusted Selleo with their software development. 
                   Fill out the form and we'll get back to you within 24 hours.
                 </p>
               </div>
@@ -560,11 +560,11 @@ const Portfolio = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-primary">Email us</h4>
-                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">webddevstudiohq@gmail.com</p>
+                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">hello@selleo.com</p>
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-primary">Call us</h4>
-                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">0899820540</p>
+                  <p className="text-xl font-bold text-text-dark hover:text-primary transition-colors cursor-pointer">+48 33 486 90 00</p>
                 </div>
               </div>
 

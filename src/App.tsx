@@ -8,6 +8,7 @@ import WhoWeAre from './pages/WhoWeAre';
 import Blog from './pages/Blog';
 import LMSForEnterprise from './pages/LMSForEnterprise';
 import CustomLMSDevelopment from './pages/CustomLMSDevelopment';
+import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+          <Route path="services/custom-software" element={<CustomSoftwareDevelopment />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />
           <Route path="industries/edtech/lms-enterprise" element={<LMSForEnterprise />} />
           <Route path="industries/edtech/custom-lms-development" element={<CustomLMSDevelopment />} />

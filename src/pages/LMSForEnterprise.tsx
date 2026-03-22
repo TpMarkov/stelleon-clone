@@ -667,7 +667,7 @@ const LMSForEnterprise = () => {
               <p className="text-lg text-neutral-500 mb-10 leading-relaxed">
                 Join HR Directors and L&D Managers who are building scalable learning ecosystems - from one central LMS, with clear reporting and compliance under control.
               </p>
-              <a href="https://www.youtube.com/user/webDevBg" target="_blank" rel="noopener noreferrer" className="inline-flex px-10 py-5 bg-primary text-white font-bold rounded hover:bg-primary/90 transition-all items-center justify-center gap-4 group shadow-lg shadow-primary/30">
+              <a href="https://www.youtube.com/user/SelleoWebMobileTV" target="_blank" rel="noopener noreferrer" className="inline-flex px-10 py-5 bg-primary text-white font-bold rounded hover:bg-primary/90 transition-all items-center justify-center gap-4 group shadow-lg shadow-primary/30">
                 Visit HR of Tomorrow Channel
                 <ArrowRight className="size-6 group-hover:translate-x-1 transition-transform" />
               </a>
