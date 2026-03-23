@@ -61,7 +61,7 @@ const Hero = () => (
 );
 
 const DNASection = () => (
-  <section className="py-24 lg:py-48 overflow-hidden">
+  <section id="dna" className="py-24 lg:py-48 overflow-hidden scroll-mt-20 lg:scroll-mt-28">
     <div className="container">
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
         <div className="flex-1 space-y-10">
@@ -142,7 +142,7 @@ const SelleoWay = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-48 bg-neutral-100">
+    <section id="values" className="py-24 lg:py-48 bg-neutral-100 scroll-mt-20 lg:scroll-mt-28">
       <div className="container text-center max-w-4xl mx-auto space-y-16">
         <div className="space-y-6">
           <span className="text-xs font-black uppercase tracking-[0.2em] text-neutral-400">Selleo Way</span>
@@ -200,7 +200,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-48 bg-[#2F3033] text-white overflow-hidden">
+    <section id="timeline" className="py-24 lg:py-48 bg-[#2F3033] text-white overflow-hidden scroll-mt-20 lg:scroll-mt-28">
       <div className="container">
         <h2 className="text-4xl lg:text-5xl font-black mb-24">
           Selleo <span className="text-primary">timeline</span>
@@ -266,8 +266,8 @@ const Timeline = () => {
   );
 };
 
-const CommunitySection = ({ title, highlight, desc, videoUrl, events, mirrored = false }: any) => (
-  <section className={`py-24 lg:py-48 ${mirrored ? 'bg-neutral-100' : 'bg-white'}`}>
+const CommunitySection = ({ id, title, highlight, desc, videoUrl, events, mirrored = false }: any) => (
+  <section id={id} className={`py-24 lg:py-48 ${mirrored ? 'bg-neutral-100' : 'bg-white'} scroll-mt-20 lg:scroll-mt-28`}>
     <div className="container">
       <div className={`flex flex-col lg:flex-row gap-20 items-center ${mirrored ? 'lg:flex-row-reverse' : ''}`}>
         <div className="flex-1 space-y-10">
@@ -343,6 +343,7 @@ const WhoWeAre = () => {
       <Timeline />
       
       <CommunitySection 
+        id="community"
         title="How we involve in"
         highlight="IT community"
         desc="We have engaged in events and initiatives to share knowledge and foster the well-being of the IT community in Poland. In doing so, we host and support."
@@ -370,7 +371,7 @@ const WhoWeAre = () => {
 
       <Numbers />
 
-      <section className="py-24 lg:py-48 border-t border-neutral-100">
+      <section id="location" className="py-24 lg:py-48 border-t border-neutral-100 scroll-mt-20 lg:scroll-mt-28">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="flex-1">

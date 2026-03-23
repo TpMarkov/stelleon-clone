@@ -161,7 +161,7 @@ const ContactForm = () => {
 };
 
 const LocationSection = () => (
-  <section className="py-24 lg:py-40 overflow-hidden">
+  <section id="who-we-are" className="py-24 lg:py-40 overflow-hidden">
     <div className="container">
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         <div className="lg:w-1/2 relative">
@@ -234,7 +234,7 @@ const LocationSection = () => (
 );
 
 const MapSection = () => (
-  <section className="bg-neutral-50 py-24 overflow-hidden relative">
+  <section id="how-we-work" className="bg-neutral-50 py-24 overflow-hidden relative">
     <div className="container relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5 space-y-8">
@@ -280,7 +280,7 @@ const MapSection = () => (
 );
 
 const SocialCollage = () => (
-  <section className="py-24 lg:py-40">
+  <section id="careers" className="py-24 lg:py-40">
     <div className="container space-y-16">
       <div className="text-center space-y-4">
         <h2 className="text-[40px] font-extrabold text-[#2F3033]">
@@ -330,7 +330,7 @@ const Contact = () => {
     <div className="pt-24 min-h-screen bg-white font-sans">
       <Breadcrumbs />
       
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section id="contact-form" className="relative py-20 lg:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 hidden lg:block">
           <img 
@@ -350,6 +350,34 @@ const Contact = () => {
 
       <LocationSection />
       <MapSection />
+      <section id="our-team" className="py-24 lg:py-40 bg-neutral-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <span className="text-sm font-black uppercase tracking-[0.3em] text-neutral-400 block">Our Team</span>
+            <h2 className="text-[40px] font-extrabold text-[#2F3033] leading-tight">
+              Meet the <span className="text-[#FF6D2A]">Experts</span>
+            </h2>
+            <p className="text-[18px] text-[#4C4D52] leading-relaxed">
+              Our team consists of passionate developers, designers, and strategists who are dedicated to building high-quality digital products.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="py-24 lg:py-40">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <span className="text-sm font-black uppercase tracking-[0.3em] text-neutral-400 block">Testimonials</span>
+            <h2 className="text-[40px] font-extrabold text-[#2F3033] leading-tight">
+              What Our <span className="text-[#FF6D2A]">Clients Say</span>
+            </h2>
+            <p className="text-[18px] text-[#4C4D52] leading-relaxed">
+              We take pride in our work and the relationships we build with our clients. Here's what some of them have to say about working with us.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <SocialCollage />
     </div>
   );

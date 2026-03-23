@@ -140,17 +140,17 @@ export const Header = () => {
     { name: 'Portfolio', href: '/portfolio' },
     { 
       name: 'About us', 
-      href: '/about',
+      href: '/who-we-are',
       dropdown: [
         {
           title: 'Company',
           items: [
             { name: 'Who we are', href: '/who-we-are', desc: 'Our DNA, values and history' },
-            { name: 'Our Team', href: '/about/team' },
-            { name: 'Careers', href: '/about/careers' },
-            { name: 'How we work', href: '/about/process' },
-            { name: 'Testimonials', href: '/about/testimonials' },
-            { name: 'Contact', href: '/contact' },
+            { name: 'Our DNA', href: '/who-we-are#dna', desc: 'Our core beliefs and culture' },
+            { name: 'Our Values', href: '/who-we-are#values', desc: 'The Selleo Way of working' },
+            { name: 'Our History', href: '/who-we-are#timeline', desc: 'Our journey through the years' },
+            { name: 'Community', href: '/who-we-are#community', desc: 'How we give back' },
+            { name: 'Our Location', href: '/who-we-are#location', desc: 'Where to find us' },
           ]
         }
       ]
