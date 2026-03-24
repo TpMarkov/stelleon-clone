@@ -15,6 +15,7 @@ import UXDesign from './pages/UXDesign';
 import AIDevelopment from './pages/AIDevelopment';
 import MobileDevelopmentServices from './pages/MobileDevelopmentServices';
 import SoftwareQualityAssurance from './pages/SoftwareQualityAssurance';
+import DevOpsCloudServices from './pages/DevOpsCloudServices';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="services/custom-software" element={<CustomSoftwareDevelopment />} />
+          <Route path="services/devops" element={<DevOpsCloudServices />} />
           <Route path="services/saas" element={<SaaSDevelopment />} />
           <Route path="services/mobile" element={<MobileDevelopmentServices />} />
           <Route path="services/quality-assurance" element={<SoftwareQualityAssurance />} />
