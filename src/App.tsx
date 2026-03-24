@@ -16,6 +16,7 @@ import AIDevelopment from './pages/AIDevelopment';
 import MobileDevelopmentServices from './pages/MobileDevelopmentServices';
 import SoftwareQualityAssurance from './pages/SoftwareQualityAssurance';
 import DevOpsCloudServices from './pages/DevOpsCloudServices';
+import ProductDiscovery from './pages/ProductDiscovery';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="services/mobile" element={<MobileDevelopmentServices />} />
           <Route path="services/quality-assurance" element={<SoftwareQualityAssurance />} />
           <Route path="services/ux-design" element={<UXDesign />} />
+          <Route path="services/discovery" element={<ProductDiscovery />} />
           <Route path="services/artificial-intelligence" element={<AIDevelopment />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />
           <Route path="industries/edtech/lms-enterprise" element={<LMSForEnterprise />} />
