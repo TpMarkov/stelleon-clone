@@ -33,9 +33,9 @@ const IconMap: { [key: string]: React.ElementType } = {
   TrendingUp
 };
 
-const Logo = () => (
+const Logo = ({ isLight }: { isLight?: boolean }) => (
   <div className="flex items-center gap-1.5">
-    <span className="text-2xl lg:text-3xl font-black tracking-tighter text-text-dark">webDevBg</span>
+    <span className={`text-2xl lg:text-3xl font-black tracking-tighter transition-colors duration-500 ${isLight ? 'text-white' : 'text-text-dark'}`}>webDevBg</span>
     <div className="size-2 lg:size-2.5 rounded-full bg-primary mt-1.5 lg:mt-2" />
   </div>
 );
@@ -44,6 +44,9 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  const isDiscoveryPage = location.pathname === '/services/discovery';
+  const isHeaderLight = isDiscoveryPage && !isScrolled && !isMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -198,7 +201,7 @@ export const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="block relative z-50">
-          <Logo />
+          <Logo isLight={isHeaderLight} />
         </Link>
 
         {/* Desktop Nav */}
@@ -208,8 +211,8 @@ export const Header = () => {
               <li key={link.name} className="group py-6">
                 <Link 
                   to={link.href}
-                  className={`relative flex items-center text-[13px] font-extrabold uppercase tracking-[0.15em] transition-colors ${
-                    isScrolled ? 'text-text-dark' : 'text-text-dark'
+                  className={`relative flex items-center text-[13px] font-extrabold uppercase tracking-[0.15em] transition-colors duration-500 ${
+                    isHeaderLight ? 'text-white' : 'text-text-dark'
                   } group-hover:text-primary`}
                 >
                   {link.name}
@@ -409,9 +412,9 @@ export const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <div className="relative size-6">
-            <span className={`absolute left-0 top-1/2 h-0.5 w-6 bg-text-dark transition-all duration-300 ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`} />
-            <span className={`absolute left-0 top-1/2 h-0.5 w-6 bg-text-dark transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-            <span className={`absolute left-0 top-1/2 h-0.5 w-6 bg-text-dark transition-all duration-300 ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`} />
+            <span className={`absolute left-0 top-1/2 h-0.5 w-6 transition-all duration-300 ${isHeaderLight ? 'bg-white' : 'bg-text-dark'} ${isMenuOpen ? 'rotate-45 bg-text-dark' : '-translate-y-2'}`} />
+            <span className={`absolute left-0 top-1/2 h-0.5 w-6 transition-all duration-300 ${isHeaderLight ? 'bg-white' : 'bg-text-dark'} ${isMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`absolute left-0 top-1/2 h-0.5 w-6 transition-all duration-300 ${isHeaderLight ? 'bg-white' : 'bg-text-dark'} ${isMenuOpen ? '-rotate-45 bg-text-dark' : 'translate-y-2'}`} />
           </div>
         </button>
       </div>

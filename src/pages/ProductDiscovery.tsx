@@ -153,7 +153,7 @@ const ProductDiscovery = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[640px] md:h-[840px] xxxl:h-screen overflow-hidden bg-black flex items-center justify-center">
+      <section className="relative h-screen overflow-hidden bg-black flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://a.storyblok.com/f/86602/1920x980/e9cb40f62e/product-discovery-services.png" 
@@ -162,6 +162,23 @@ const ProductDiscovery = () => {
             referrerPolicy="no-referrer"
           />
         </div>
+
+        {/* Breadcrumbs inside Hero */}
+        <div className="absolute left-0 top-24 lg:top-32 z-40 w-full">
+          <div className="container">
+            <nav className="flex items-center gap-8 text-sm text-white/50 overflow-x-auto whitespace-nowrap scrollbar-hide">
+              <Link to="/" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Home className="size-4" />
+                <span>Home</span>
+              </Link>
+              <div className="w-0.5 h-4 bg-white/20" />
+              <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+              <div className="w-0.5 h-4 bg-white/20" />
+              <span className="text-white font-medium">Product Discovery</span>
+            </nav>
+          </div>
+        </div>
+
         <div className="container relative z-10 text-center xl:max-w-[1110px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -176,30 +193,19 @@ const ProductDiscovery = () => {
             </p>
           </motion.div>
         </div>
-        <div className="absolute bottom-12 left-12 hidden xxxl:block">
-          <div className="flex flex-col items-center gap-4 text-white/50">
+        <button 
+          onClick={() => document.getElementById('main-content')?.scrollIntoView({ behavior: 'smooth' })}
+          className="absolute bottom-12 left-12 hidden xxxl:block group cursor-pointer"
+        >
+          <div className="flex flex-col items-center gap-4 text-white/50 group-hover:text-white transition-colors">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] rotate-90 origin-left translate-x-2">Scroll</span>
-            <div className="w-px h-12 bg-white/20" />
+            <div className="w-px h-12 bg-white/20 group-hover:bg-primary transition-colors" />
           </div>
-        </div>
+        </button>
       </section>
 
-      {/* Breadcrumbs */}
-      <div className="container py-6">
-        <nav className="flex items-center gap-2 text-sm text-neutral-400">
-          <Link to="/" className="flex items-center gap-1 hover:text-primary transition-colors">
-            <Home className="size-4" />
-            <span>Home</span>
-          </Link>
-          <ChevronRight className="size-4" />
-          <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
-          <ChevronRight className="size-4" />
-          <span className="text-text-dark font-medium">Product Discovery</span>
-        </nav>
-      </div>
-
       {/* Main Section */}
-      <section className="py-24 lg:py-32">
+      <section id="main-content" className="py-24 lg:py-32">
         <div className="container">
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-32 items-center">
             <div className="xxl:ml-32">
