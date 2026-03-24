@@ -13,6 +13,7 @@ import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment';
 import SaaSDevelopment from './pages/SaaSDevelopment';
 import UXDesign from './pages/UXDesign';
 import AIDevelopment from './pages/AIDevelopment';
+import MobileDevelopmentServices from './pages/MobileDevelopmentServices';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="services" element={<Services />} />
           <Route path="services/custom-software" element={<CustomSoftwareDevelopment />} />
           <Route path="services/saas" element={<SaaSDevelopment />} />
+          <Route path="services/mobile" element={<MobileDevelopmentServices />} />
           <Route path="services/ux-design" element={<UXDesign />} />
           <Route path="services/artificial-intelligence" element={<AIDevelopment />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />
