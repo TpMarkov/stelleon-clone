@@ -158,21 +158,20 @@ const ProductDiscovery = () => {
           <img 
             src="https://a.storyblok.com/f/86602/1920x980/e9cb40f62e/product-discovery-services.png" 
             alt="Hero"
-            className="size-full object-cover opacity-30"
+            className="size-full object-cover object-[50%_top] opacity-30"
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 text-center xl:max-w-[1110px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white leading-tight mb-8">
-              New <span className="text-primary">Product Discovery & Product Development</span> Services
+            <h1 className="text-4xl md:text-6xl xl:text-8xl font-black text-white leading-tight mb-0">
+              New <strong className="text-primary font-black">Product Discovery & Product Development</strong> Services
             </h1>
-            <p className="text-lg md:text-xl text-white leading-relaxed">
+            <p className="text-lg md:text-xl text-white leading-relaxed mt-6 max-w-[800px] mx-auto px-6">
               Discover the Right Product for Your Business with Our Expert Guidance
             </p>
           </motion.div>
