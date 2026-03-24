@@ -14,6 +14,7 @@ import SaaSDevelopment from './pages/SaaSDevelopment';
 import UXDesign from './pages/UXDesign';
 import AIDevelopment from './pages/AIDevelopment';
 import MobileDevelopmentServices from './pages/MobileDevelopmentServices';
+import SoftwareQualityAssurance from './pages/SoftwareQualityAssurance';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="services/custom-software" element={<CustomSoftwareDevelopment />} />
           <Route path="services/saas" element={<SaaSDevelopment />} />
           <Route path="services/mobile" element={<MobileDevelopmentServices />} />
+          <Route path="services/quality-assurance" element={<SoftwareQualityAssurance />} />
           <Route path="services/ux-design" element={<UXDesign />} />
           <Route path="services/artificial-intelligence" element={<AIDevelopment />} />
           <Route path="industries" element={<div className="pt-32 container"><h1>Industries</h1></div>} />

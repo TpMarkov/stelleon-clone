@@ -73,7 +73,7 @@ export const Header = () => {
           title: 'How we do it',
           items: [
             { name: 'DevOps & Cloud', href: '/services/devops', desc: 'Infrastructure and automation' },
-            { name: 'Quality Assurance', href: '/services/qa', desc: 'Ensuring bug-free software' },
+            { name: 'Quality Assurance', href: '/services/quality-assurance', desc: 'Ensuring bug-free software' },
             { name: 'Staff Augmentation', href: '/services/staffing', desc: 'Extend your team with our experts' },
             { name: 'MVP Development', href: '/services/mvp', desc: 'Fast-track your product to market' },
             { name: 'Software Outsourcing', href: '/services/outsourcing', desc: 'End-to-end development services' },
